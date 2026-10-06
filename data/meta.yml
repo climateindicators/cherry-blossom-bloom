@@ -1,0 +1,55 @@
+indicator:
+  name: 'Community Connection: Cherry Blossom Bloom Dates in Washington, D.C.'
+  slug: cherry-blossom-bloom
+  publisher: U.S. Environmental Protection Agency
+  source_page: https://19january2025snapshot.epa.gov/climate-indicators/cherry-blossoms/index.html
+  technical_documentation: https://19january2025snapshot.epa.gov/system/files/documents/2024-05/cherry-blossoms_documentation.pdf
+  rights: Public domain, work of the U.S. Government (17 U.S.C. 105)
+datasets:
+- file: cherry_blossom_bloom.csv
+  figure: Figure 1
+  figure_title: Figure 1. Peak Bloom Date for Cherry Trees Around Washington, D.C.'s
+    Tidal Basin, 1921-2024
+  source_file: cherry-blossoms_fig-1.csv
+  source_sha256: c171ed83a4138b9857942a15c15dda18e291c113dad9bacb40b40c87d3ddc2b8
+  source_encoding: UTF-8
+  data_source: National Park Service, 2024; National Cherry Blossom Festival, 2024
+  web_update: June 2024
+  unit: Days from January 1; days from January 1; days duration
+  rows: 276
+  columns:
+  - name: year
+    type: integer
+    description: Calendar year
+  - name: series_key
+    type: string
+    description: Machine-readable series identifier
+  - name: series_label
+    type: string
+    description: Display label, as used in EPA's published source file
+  - name: unit
+    type: string
+    description: Unit of `value`
+  - name: value
+    type: number
+    description: Days from January 1 (peak bloom, festival start) or days (festival
+      duration), verbatim from the source file.
+  series:
+  - key: peak_bloom
+    label: Yoshino peak bloom date
+    source_header: Yoshino peak bloom date
+    coverage: 1921-2024
+    note: Peak bloom date of the Yoshino cherry trees around the Tidal Basin, when
+      70 percent of blossoms are in full bloom.
+  - key: festival_start
+    label: Cherry blossom festival start date
+    source_header: Cherry blossom festival start date
+    coverage: 1934-2024, excluding 1942-1946
+    note: Blank in the source file outside this coverage; those years are omitted
+      from this file rather than written as empty values.
+  - key: festival_duration
+    label: Cherry blossom festival duration
+    source_header: Cherry blossom festival duration
+    coverage: 1934-2024, excluding 1942-1946
+    note: Blank in the source file outside this coverage; those years are omitted
+      from this file rather than written as empty values.
